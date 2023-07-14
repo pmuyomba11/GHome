@@ -47,6 +47,12 @@ app.put('/notes', (req,res) => {
    res.redirect('/notes')
 })
 
+//Delete Route
+app.delete('/notes/:id', (req,res) => {
+    users.splice(users[req.params.id], 1);
+    res.redirect('/notes');
+})
+
 //PORT Listening///
 app.listen(PORT, ()=> {
     console.log(`Server running on Port: ${PORT}`.blue.bold.underline);

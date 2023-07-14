@@ -11,9 +11,9 @@
     <ul>
        <% for(let i = 0; i< allUsers.length; i++){ %>
            <li><a href="/notes/<%=i;%>"><%=allUsers[i].name%></a></li>
-           <!-- <form action="" method="post">
+           <form action="/notes/<%=i;%>?_method=DELETE" method="post">
             <input type="submit" value="Remove">
-           </form> -->
+           </form>
        <% }%>
     </ul>
     <a href="/notes/new">Create User</a>
