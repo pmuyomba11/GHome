@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home~Page</title>
+   
 </head>
 <body>
     <h1>Users</h1>
     <ul>
        <% for(let i = 0; i< allUsers.length; i++){ %>
            <li><a href="/notes/<%=i;%>"><%=allUsers[i].name%></a></li>
+           <!-- <form action="" method="post">
+            <input type="submit" value="Remove">
+           </form> -->
        <% }%>
     </ul>
+    <a href="/notes/new">Create User</a>
 </body>
 </html>
